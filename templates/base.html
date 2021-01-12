@@ -44,7 +44,7 @@
   </head>
   <body>
     <header class="container-fluid fixed-top w-100">
-        <div id="topnav"  class="row pt-lg-2 bg-white d-lg-flex">
+        <div id="topnav"  class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-black my-0"><strong>ALTHEA</strong></h2>
@@ -54,7 +54,7 @@
                 <ul class="list-inline list-unstyled text-center my-0">
                     <li class="list-inline-item">
                         <div class="text-center">	                            	
-                                <a class="my-0 color-4" href="">Shop</a>	
+                            <a class="my-0 color-4" href="">Shop</a>	
                         </div>
                     </li>
                     <li class="list-inline-item">
@@ -75,28 +75,28 @@
                                     <p class="my-0 color-3">My Account</p>
                             </div>
                         </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                                {% if request.user.is_authenticated %}
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                     <a href="" class="dropdown-item">
                                         Product Management
                                     </a>
-                                        {% endif %}
+                                {% endif %}
                                     <a href="" class="dropdown-item">
                                         My Profile
                                     </a>
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">
                                         Logout
                                     </a>
-                                {% else %}
+                            {% else %}
                                     <a href="{% url 'account_signup' %}" class="dropdown-item">
                                         Register
                                     </a>
                                     <a href="{% url 'account_login' %}" class="dropdown-item">
                                         Login
                                     </a>
-                                {% endif %}
-                            </div>
+                            {% endif %}
+                        </div>
                     </li>
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}color-3 font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
@@ -127,7 +127,7 @@
                {% include 'includes/main-nav.html' %}
             </nav>
         </div>
-        <hr>
+        <hr class="divider">
     </header>        
 
     <!-- For django messages -->    

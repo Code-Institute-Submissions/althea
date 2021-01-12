@@ -12,7 +12,14 @@ body {
 /* --- Carousel --- */
 
 .home-slide {
-    margin-bottom: 150px;
+    margin-bottom: 6rem;
+    margin-top: 5rem;
+}
+
+/* --- About section --- */
+
+.about {
+    text-align: center;
 }
 
 .logo-font {
