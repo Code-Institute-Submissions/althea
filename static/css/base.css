@@ -6,6 +6,13 @@ html {
 
 body {    
     font-family: 'Lato';
+    background-color: red;
+}
+
+/* --- Carousel --- */
+
+.home-slide {
+    margin-bottom: 150px;
 }
 
 .logo-font {
