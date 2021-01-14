@@ -18,53 +18,17 @@
                 <hr>
             </div>
         </div>
-        <!-- Category nav -->
-        <div class="container-category mb-5">
-            <div class="row b d-none pt-lg-2 d-lg-flex text-center">
-                <ul class="list-inline list-unstyled mx-auto">
-                    <li class="dropdown list-inline-item">
-                        <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-store-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            All Products <i class="fas fa-angle-down"></i>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="all-store-link">
-                            <a href="{% url 'store' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                            <a href="{% url 'store' %}?sort=name&direction=asc" class="dropdown-item ">By Name</a>
-                            <a href="{% url 'store' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
-                            <a href="{% url 'store' %}" class="dropdown-item">All Products</a>
-                        </div>
-                    </li>
-                    <li class="list-inline-item">                    
-                        <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'store' %}">
-                            Clothing
-                        </a>                    
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'store' %}">
-                            Shoes
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'store' %}">
-                            Watch
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'store' %}">
-                            Bags
-                        </a>
-                    </li>                    
-                </ul>
-            </div>
-            <!-- Category nav mobile -->
-            <nav class="navbar navbar-expand-lg navbar-light w-100 d-block d-lg-none">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#store-nav" aria-controls="store-nav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    {% include 'includes/store-nav.html' %}
-            </nav>
-        </div>
+        
+        <!-- Category nav mobile -->
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#store-nav" aria-controls="store-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                {% include 'includes/store-nav.html' %}
+        </nav>
+      
         <div class="row mb-4">
-            <!-- the different products in the store -->
+            <!-- Different products in the store -->
             <div class="product-container col-10 offset-1"> 
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">

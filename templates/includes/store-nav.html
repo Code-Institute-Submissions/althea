@@ -1,35 +1,64 @@
 <div class="collapse navbar-collapse" id="store-nav">
-    <ul class="navbar-nav w-auto mx-auto d-block d-lg-none">        
-        <li class="nav-item dropdown d-block d-lg-none">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item dropdown">
+            <!-- Dropdown on Mobile view for All Products -->
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-store-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products <i class="fas fa-angle-down"></i>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-store-link">
-                <a href="{% url 'store' %}" class="dropdown-item">By Price</a>
-                <a href="{% url 'store' %}" class="dropdown-item ">By Name</a>
-                <a href="{% url 'store' %}" class="dropdown-item">By Category</a>
-                <a href="{% url 'store' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'store' %}" class="dropdown-item">By Price </a>
+                <a href="{% url 'store' %}" class="dropdown-item ">By Name </a>
+                <a href="{% url 'store' %}" class="dropdown-item">By Category </a>
+                <a href="{% url 'store' %}" class="dropdown-item">All Products </a>
             </div>
         </li>
-        <li class="nav-item dropdown d-block d-lg-none">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'store' %}">
-                Clothing
+        <!-- Dropdown on Mobile view for Clothing -->
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="{% url 'store' %}">
+                Clothing <i class="fas fa-angle-down"></i>
             </a>
+            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">                
+                <a href="{% url 'store' %}?category=tops" class="dropdown-item">Tops </a>
+                <a href="{% url 'store' %}?category=bottoms" class="dropdown-item">Bottoms </a>
+                <a href="{% url 'store' %}?category=tops,bottoms" class="dropdown-item">All Clothing </a>
+            </div>
         </li>
-        <li class="nav-item dropdown d-block d-lg-none">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'store' %}">
-                Shoes
+        <!-- Dropdown on Mobile view for Shoes -->
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" id="shoes-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="{% url 'store' %}">
+                Shoes <i class="fas fa-angle-down"></i>
             </a>
+            <div class="dropdown-menu border-0" aria-labelledby="shoes-link">                
+                <a href="{% url 'store' %}?category=active" class="dropdown-item">Active / Sports</a>
+                <a href="{% url 'store' %}?category=office" class="dropdown-item">Office </a>
+                <a href="{% url 'store' %}?category=active,office" class="dropdown-item">All Shoes </a>
+            </div>
         </li>
-         <li class="nav-item dropdown d-block d-lg-none">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'store' %}">
-                Watch
+        <!-- Dropdown on Mobile view for Watch -->
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" id="watch-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="{% url 'store' %}">
+                Watch <i class="fas fa-angle-down"></i>
             </a>
+            <div class="dropdown-menu border-0" aria-labelledby="watch-link">                
+                <a href="{% url 'store' %}?category=gents" class="dropdown-item">Gents </a>
+                <a href="{% url 'store' %}?category=ladies" class="dropdown-item">Ladies </a>
+                <a href="{% url 'store' %}?category=gents,ladies" class="dropdown-item">All Watch</a>
+            </div>
         </li>
-        <li class="nav-item dropdown d-block d-lg-none">
-            <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'store' %}">
-                Bags
+        <!-- Dropdown on Mobile view for Bags -->
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" id="bags-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="{% url 'store' %}">
+                Bags <i class="fas fa-angle-down"></i>
             </a>
+            <div class="dropdown-menu border-0" aria-labelledby="bags-link">                
+                <a href="{% url 'store' %}?category=backpack" class="dropdown-item">Backpack </a>
+                <a href="{% url 'store' %}?category=purse,totes" class="dropdown-item">
+                    Purse and Totes                     
+                </a>
+                <a href="{% url 'store' %}?category=backpack,purse,totes" class="dropdown-item">
+                    All Watch
+                </a>
+            </div>
         </li>        
     </ul>
 </div>
