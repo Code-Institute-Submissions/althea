@@ -6,9 +6,9 @@
                 All Products <i class="fas fa-angle-down"></i>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-store-link">
-                <a href="{% url 'store' %}" class="dropdown-item">By Price </a>
-                <a href="{% url 'store' %}" class="dropdown-item ">By Name </a>
-                <a href="{% url 'store' %}" class="dropdown-item">By Category </a>
+                <a href="{% url 'store' %}?sort=price&direction=asc" class="dropdown-item">By Price </a>
+                <a href="{% url 'store' %}?sort=name&direction=asc" class="dropdown-item ">By Name </a>
+                <a href="{% url 'store' %}?sort=category&direction=asc" class="dropdown-item">By Category </a>
                 <a href="{% url 'store' %}" class="dropdown-item">All Products </a>
             </div>
         </li>
