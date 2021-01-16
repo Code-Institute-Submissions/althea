@@ -120,9 +120,9 @@
                                 </div>
                                     <p class="my-0 color-4">
                                         {% if grand_total %}
-                                            ${{ grand_total|floatformat:2 }}
+                                            ₱{{ grand_total|floatformat:2 }}
                                         {% else %}
-                                            $0.00
+                                            ₱0.00
                                         {% endif %}
                                     </p>
                             </div>
@@ -144,7 +144,7 @@
         <!-- Delivery banner information -->
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
+                <h4 class="logo-font my-1">Free delivery on orders over ₱{{ free_delivery_threshold }}!</h4>                
             </div>            
         </div>
     </header>        
