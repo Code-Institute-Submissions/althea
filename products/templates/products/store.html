@@ -133,13 +133,14 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- Function for the top to button arrow -->
     <script type="text/javascript">
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
 	</script>
     
-     <!-- Js for the sort selector -->
+     <!-- Function for the sort selector -->
     <script type="text/javascript">
         $('#sort-selector').change(function() {
             var selector = $(this);
