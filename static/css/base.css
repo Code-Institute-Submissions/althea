@@ -109,7 +109,11 @@ a.category-badge > span.badge:hover {
     right: 10px;
 }
 
-.btt-link {
+/* --- Top to button anchor --- */
+
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
