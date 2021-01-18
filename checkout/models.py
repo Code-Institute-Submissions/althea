@@ -12,7 +12,7 @@ class Order(models.Model):
     phone_number = models.CharField(max_length=20, null=False, blank=False)
     building_name = models.CharField(max_length=20, null=True, blank=True)
     house_number = models.CharField(max_length=40, null=False, blank=False)
-    street_address1 = models.CharField(max_length=80, null=False, blank=False)
+    street_address = models.CharField(max_length=80, null=False, blank=False)
     barangay = models.CharField(max_length=80, null=False, blank=False)
     landmark = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
