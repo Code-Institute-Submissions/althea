@@ -6,7 +6,7 @@ html {
 
 body {    
     font-family: 'Lato';
-    background-color:#6c757d30;
+    background-color: #f8f9fa66;
     height: calc(100vh - 164px);
 }
 
@@ -34,6 +34,11 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+}
+
+.banner-font {
+    text-transform: uppercase;
+    background-color: #28a745 !important;    
 }
 
 .main-logo-link {
@@ -118,6 +123,7 @@ a.category-badge > span.badge:hover {
 }
 
 /* --- Bootstrap toasts --- */
+
 .message-container {
     position: fixed;
     top: 72px;
@@ -184,6 +190,12 @@ a.category-badge > span.badge:hover {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* --- Navbar --- */
+
+.navbar {
+    padding: 0px;
 }
 
 /* --- Media Queries --- */
