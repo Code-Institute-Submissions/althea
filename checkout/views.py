@@ -47,6 +47,9 @@ def checkout(request):
             'house_number': request.POST['house_number'],
             'street_address': request.POST['street_address'],
             'barangay': request.POST['barangay'],
+            'country': request.POST['country'],
+            'province': request.POST['province'],
+            'town_or_city': request.POST['town_or_city'],
             'landmark': request.POST['landmark'],
         }
         order_form = OrderForm(form_data)

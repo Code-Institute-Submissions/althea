@@ -87,6 +87,9 @@
                         {{ order_form.house_number | as_crispy_field }}
                         {{ order_form.street_address | as_crispy_field }}
                         {{ order_form.barangay | as_crispy_field }}
+                        {{ order_form.town_or_city | as_crispy_field }}
+                        {{ order_form.province | as_crispy_field }}
+                        {{ order_form.country | as_crispy_field }}                        
                         {{ order_form.landmark | as_crispy_field }}
                         <div class="form-check form-check-inline float-right mr-0">
 							{% if user.is_authenticated %}

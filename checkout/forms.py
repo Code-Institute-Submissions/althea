@@ -6,8 +6,9 @@ class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number',
-                  'street_address', 'building_name',
-                  'house_number', 'barangay', 'landmark',)
+                  'street_address', 'building_name', 'country',
+                  'house_number', 'barangay', 'landmark',
+                  'province', 'town_or_city',)
 
     def __init__(self, *args, **kwargs):
         """
@@ -22,6 +23,9 @@ class OrderForm(forms.ModelForm):
             'building_name': 'Building Name',
             'house_number': 'House Number',
             'street_address': 'Street Address',
+            'country': 'Country',
+            'town_or_city': 'Town or City',
+            'province': 'Province',
             'barangay': 'Barangay',
             'landmark': 'Landmark',
         }
