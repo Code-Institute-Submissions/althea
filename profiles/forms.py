@@ -20,7 +20,7 @@ class UserProfileForm(forms.ModelForm):
             'default_street_address': 'Street Address',
             'default_town_or_city': 'Town or City',
             'default_province': 'Province',
-            'default_barangay': 'Barangay',            
+            'default_barangay': 'Barangay',
         }
 
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
