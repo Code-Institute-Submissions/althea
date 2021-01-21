@@ -122,6 +122,8 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+/* --- Search box --- */
+
 input[name='q']::placeholder {
     color: #aab7c4;
 }
