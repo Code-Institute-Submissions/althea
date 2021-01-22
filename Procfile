@@ -1,1 +1,1 @@
-web: gunicorn althea.wsgi:application
+web:gunicorn althea.wsgi:application
