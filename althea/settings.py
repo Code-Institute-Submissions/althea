@@ -30,7 +30,6 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['althea-store.herokuapp.com', 'localhost']
 
-
 # Application definition
 
 INSTALLED_APPS = [
