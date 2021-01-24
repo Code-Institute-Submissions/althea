@@ -6,10 +6,10 @@
                 All Products <i class="fas fa-angle-down"></i>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-store-link">
-                <a href="{% url 'store' %}?sort=price&direction=asc" class="dropdown-item">By Price </a>
-                <a href="{% url 'store' %}?sort=name&direction=asc" class="dropdown-item ">By Name </a>
-                <a href="{% url 'store' %}?sort=category&direction=asc" class="dropdown-item">By Category </a>
-                <a href="{% url 'store' %}" class="dropdown-item">All Products </a>
+                <a href="{% url 'store' %}?sort=price&direction=asc" class="dropdown-item dropdown-text">By Price </a>
+                <a href="{% url 'store' %}?sort=name&direction=asc" class="dropdown-item dropdown-text">By Name </a>
+                <a href="{% url 'store' %}?sort=category&direction=asc" class="dropdown-item dropdown-text">By Category </a>
+                <a href="{% url 'store' %}" class="dropdown-item dropdown-text">All Products </a>
             </div>
         </li>
         <!-- Dropdown  for Food Grocery -->
@@ -18,13 +18,13 @@
                 Food Grocery <i class="fas fa-angle-down"></i>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="grocery-link">                
-                <a href="{% url 'store' %}?category=frozen" class="dropdown-item">Frozen </a>
-                <a href="{% url 'store' %}?category=canned goods" class="dropdown-item">Canned Goods </a>
-                <a href="{% url 'store' %}?category=instant noodles" class="dropdown-item">Instant Noodles </a>
-                <a href="{% url 'store' %}?category=condiments" class="dropdown-item">Condiments </a>
-                <a href="{% url 'store' %}?category=snacks" class="dropdown-item">Snacks </a>
-                <a href="{% url 'store' %}?category=cooking Oil" class="dropdown-item">Oils </a>
-                <a href="{% url 'store' %}?category=frozen,canned goods,instant noodles,condiments,snacks,cooking oil" class="dropdown-item">
+                <a href="{% url 'store' %}?category=frozen" class="dropdown-item dropdown-text">Frozen </a>
+                <a href="{% url 'store' %}?category=canned goods" class="dropdown-item dropdown-text">Canned Goods </a>
+                <a href="{% url 'store' %}?category=instant noodles" class="dropdown-item dropdown-text">Instant Noodles </a>
+                <a href="{% url 'store' %}?category=condiments" class="dropdown-item dropdown-text ">Condiments </a>
+                <a href="{% url 'store' %}?category=snacks" class="dropdown-item dropdown-text">Snacks </a>
+                <a href="{% url 'store' %}?category=cooking Oil" class="dropdown-item dropdown-text">Oils </a>
+                <a href="{% url 'store' %}?category=frozen,canned goods,instant noodles,condiments,snacks,cooking oil dropdown-text" class="dropdown-item">
                     All Food Grocery 
                 </a>
             </div>
@@ -35,12 +35,12 @@
                 Fresh Goods <i class="fas fa-angle-down"></i>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="fresh-link">                
-                <a href="{% url 'store' %}?category=eggs" class="dropdown-item">Eggs</a>
-                <a href="{% url 'store' %}?category=meat,fish" class="dropdown-item">Meats and Fishes </a>
-                <a href="{% url 'store' %}?category=fruits,vegetables" class="dropdown-item">
+                <a href="{% url 'store' %}?category=eggs" class="dropdown-item dropdown-text">Eggs</a>
+                <a href="{% url 'store' %}?category=meat,fish" class="dropdown-item dropdown-text">Meats and Fishes </a>
+                <a href="{% url 'store' %}?category=fruits,vegetables dropdown-text" class="dropdown-item dropdown-text">
                     Fruits and Vegetables 
                 </a>
-                <a href="{% url 'store' %}?category=eggs,meat,fish,fruits,vegetables" class="dropdown-item">
+                <a href="{% url 'store' %}?category=eggs,meat,fish,fruits,vegetables" class="dropdown-item dropdown-text">
                     All Fresh Goods 
                 </a>
             </div>
@@ -51,9 +51,9 @@
                 Drinks <i class="fas fa-angle-down"></i>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="drinks-link">                
-                <a href="{% url 'store' %}?category=non-alcoholic" class="dropdown-item">Non-Alcoholic </a>
-                <a href="{% url 'store' %}?category=alcoholic" class="dropdown-item">Alcoholic </a>
-                <a href="{% url 'store' %}?category=non-alcoholic,alcoholic" class="dropdown-item">All Drinks</a>
+                <a href="{% url 'store' %}?category=non-alcoholic" class="dropdown-item dropdown-text">Non-Alcoholic </a>
+                <a href="{% url 'store' %}?category=alcoholic" class="dropdown-item dropdown-text">Alcoholic </a>
+                <a href="{% url 'store' %}?category=non-alcoholic,alcoholic" class="dropdown-item dropdown-text">All Drinks</a>
             </div>
         </li>
         <!-- Dropdown for Household -->
@@ -62,14 +62,14 @@
                 Household <i class="fas fa-angle-down"></i>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="household-link">                
-                <a href="{% url 'store' %}?category=detergents" class="dropdown-item">Detergents </a>
-                <a href="{% url 'store' %}?category=toiletries" class="dropdown-item">
+                <a href="{% url 'store' %}?category=detergents" class="dropdown-item dropdown-text">Detergents </a>
+                <a href="{% url 'store' %}?category=toiletries" class="dropdown-item dropdown-text">
                     Toiletries                     
                 </a>
-                <a href="{% url 'store' %}?category=other household" class="dropdown-item">
+                <a href="{% url 'store' %}?category=other household" class="dropdown-item dropdown-text">
                     Other Household
                 </a>
-                <a href="{% url 'store' %}?category=detergents,toiletries,other household" class="dropdown-item">
+                <a href="{% url 'store' %}?category=detergents,toiletries,other household" class="dropdown-item dropdown-text">
                     All Household
                 </a>
             </div>

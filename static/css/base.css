@@ -10,10 +10,31 @@ body {
     height: calc(100vh - 164px);
 }
 
-/* --- About section --- */
-.about {
-    text-align: center;
+/* --- Logo --- */
+.althea-logo {
+    color: #3f3b41 ;
+    text-transform: uppercase;
 }
+
+.store {
+    color: #caadae;
+}
+
+/* --- Products index page images --- */
+.products-index {    
+    border-radius: 1em;
+}
+
+.welcome-store {
+    background-color: #c74739;
+    text-transform: uppercase;
+}
+
+.greeting {
+    color: #c74739;
+}
+
+
 
 /* from Bulma */
 .icon {
@@ -38,7 +59,7 @@ body {
 }
 
 .shop-now-button {
-    background: black;
+    background: #f5f1e6;
     color: white;
     min-width: 260px;
 }
@@ -67,7 +88,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: #e2dfd6;
     color: white;
 }
 
@@ -190,6 +211,15 @@ input[name='q']::placeholder {
     padding: 0px;
 }
 
+.dropdown-text {
+    color: #c74739 !important;
+}
+
+.our-store {
+    color: #c74739 ;
+    text-transform: uppercase;
+}
+
 /* --- Allauth form formatting --- */
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
@@ -250,6 +280,10 @@ input[name='q']::placeholder {
   .container {
     max-width: 80%;
   }
+
+   .header-container {
+        padding-top: 2em;
+    }
 }
 
 /* --- Product form --- */
@@ -290,15 +324,23 @@ input[name='q']::placeholder {
         z-index: 1030;
     }
 
+    .banner-font {
+        font-size: 2em !important;
+    }
+
     .header-container {
-        padding-top: 164px;
+        padding-top: 4em;
     }
 }
 
 /* --- Pad the top a bit when navbar is collapsed on mobile --- */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 3em;
+    }
+
+    .banner-font {
+        font-size: 2em !important;
     }
 
     body {
@@ -308,9 +350,10 @@ input[name='q']::placeholder {
 
 /* --- Styling for footer --- */
 #footer {
-    background-color: #6c757d4f;
+    background-color: #7e7e83;
     text-align: center;
     font-size: 1em;
+    color: #f5f1e6;
 }
 
 .footer-row {
@@ -330,10 +373,10 @@ li {
     list-style-type: none;
 } 
 
-.footer-link a {
+.footer-link a {    
     text-decoration: underline;
-    text-decoration-color: #000;
-    color: #000;
+    text-decoration-color: #c74739;
+    color: #f5f1e6;
 }
 
 .footer-link a:hover {
@@ -345,7 +388,7 @@ li {
 .social-icon i {
     font-size: 1.5em;
     text-align: center;
-    color: #f8bab1;
+    color: #c74739;
     padding: 0.25em;
     border-radius: 50%;
     background-color: #fff;
@@ -359,11 +402,11 @@ li {
     transition: .25s ease-in-out;
 }
 
-.submit-button, .breadcrumb {
+.submit-button-footer, .breadcrumb {
     background-color: #f8bab1;
 }
 
-.submit-button:hover {
+.submit-button-footer:hover {
     color: #fff;
     background-color: #f8bab1;
     transition: .25s ease-in-out;

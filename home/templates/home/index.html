@@ -20,12 +20,10 @@
     <div class="page-container">
         <div class="page-width">           
             <div class="text-center">
-                <p>
-                    <a href="{% url 'store' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                        Welcome to ALTHEA's Online Store.
-                    </a>
-                </p>
-                <p>Delivery Service within Tabuk City, Kalinga.</p>
+                <h2 class="greeting">                    
+                    Welcome to ALTHEA's Online Store.                   
+                </h2>
+                <p>Grocery Delivery Service within Tabuk City, Kalinga.</p>
                 <p>Everyday fresh and high quality items.</p>
                 <p><strong>DELIVERY FEES</strong></p>
                 <p>₱50.00 - within Bulanao</p>
@@ -42,31 +40,31 @@
     <div class="container">
         <div class="row">
             <div class="col-12">                
-                <h3 class="text-center">Our Products</h3>
+                <h3 class="text-center welcome-store">Our Products</h3>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6 text-center">
                 <a href="{% url 'store' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
                     <img class="img-fluid rounded" src="{{ MEDIA_URL }}grocery.jpg" alt="grocery">
                 </a>
-                <p>Food Grocery</p>
+                <h4 class="welcome-store">Food Grocery</h4>
             </div>
               <div class="col-sm-12 col-md-6 col-lg-6 text-center">
                 <a href="{% url 'store' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
                     <img class="img-fluid rounded" src="{{ MEDIA_URL }}fresh.jpg" alt="fresh">
                 </a>
-                <p>Fresh Goods</p>
+                <h4 class="welcome-store">Fresh Goods</h4>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6 text-center">
                 <a href="{% url 'store' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
                     <img class="img-fluid rounded" src="{{ MEDIA_URL }}drinks.jpg" alt="drinks">
                 </a>    
-                <p>Drinks</p>
+                <h4 class="welcome-store">Drinks</h4>
             </div>
               <div class="col-sm-12 col-md-6 col-lg-6 text-center">
                 <a href="{% url 'store' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
                     <img class="img-fluid rounded" src="{{ MEDIA_URL }}household.jpg" alt="household">
                 </a>
-                <p>Household</p>
+                <h4 class="welcome-store">Household</h4>
             </div>
         </div>
 
@@ -74,8 +72,8 @@
             <div class="col-12 text-center">
                 <!-- Shop now link -->                                             
                 <p>
-                    <a href="{% url 'store' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                        Shop Now
+                    <a href="{% url 'store' %}" class="welcome-store btn btn-lg rounded-0 text-uppercase py-3">
+                        <strong>Shop Now</strong>
                     </a>
                 </p>                    
             </div>
