@@ -1,52 +1,74 @@
-<div class="row">
-            <div class="col-sm-12 col-md-6 mt-4 footer-col offset-lg-1">
-                <h5>Quicklinks</h5>
-                <p>
-                    <a class="text-black" href="">About Us</a><br>
-                    <a class="text-black" href="">Our Store</a><br>
-                    <a class="text-black" href="">Contact Us</a><br>
-                </p>
-            </div>
-            <div class="col-sm-12 col-md-3 col-lg-2 mt-4 footer-col offset-lg-1">
-                <h5>Explore</h5>
-                <p>
-                    <a class="text-black" href="">How it works</a><br>
-                    <a class="text-black" href="">What's inside</a><br>
-                    <a class="text-black" href="">Countries</a>
-                </p>
-            </div>
-            <div class="col-sm-12 col-md-3 col-lg-2 mt-4 footer-col offset-lg-1">
-                <h5>Support</h5>
-                <p>
-                    <a class="text-black" href="">Contact Us</a><br>
-                    <a class="text-black" href="">FAQ</a>
-                </p>
-            </div>
-            <div class="col-sm-12 col-md-3 col-lg-2 mt-4 footer-col offset-lg-1">
-                <h5>Company</h5>
-                <p>
-                    <a class="text-black" href="">About Us</a>
-                    <ul class="linst-inline social-links text-left">
-                        <li class="list-inline-item">
-                            <a target="_blank" href="https://www.facebook.com/">
-                                <i class="fab fa-facebook" aria-hidden="true"></i>
-                                <span class="sr-only">Facebook</span>
-                            </a>
-                        </li>
+{% load static %}
 
-                        <li class="list-inline-item">
-                            <a target="_blank" href="https://www.instagram.com/">
-                                <i class="fab fa-instagram" aria-hidden="true"></i>
-                                <span class="sr-only">Instagram</span>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a target="_blank" href="https://twitter.com/">
-                                <i class="fab fa-twitter" aria-hidden="true"></i>
-                                <span class="sr-only">Twitter</span>
-                            </a>
-                        </li>
-                    </ul>
-                </p>
-            </div>            
+<footer id="footer" class="container-fluid">
+    <div class="row footer-row">
+        <div class="col-12 col-lg-4">
+            <p class="footer-header">
+                <i class="fas fa-question-circle mr-2"></i>
+                <strong>Do you have any questions?</strong>
+            </p>
+            <hr class="d-none d-lg-block black-rule">
+            <p>Our team memebrs are available Monday - Sunday from 8am - 6pm</p>
+            <ul>
+                <li class="footer-link"><a href="">About</a></li>
+                <li class="footer-link"><a href="">Shop</a></li>
+                <li class="footer-link"><a href="">Contact</a></li>
+            </ul>
         </div>
+        <div class="col-12 col-lg-4">
+            <hr class="d-lg-none black-rule">
+            <p class="footer-header">
+                <i class="fas fa-envelope mr-2"></i>
+                <strong>Newsletter</strong>
+            </p>
+            <hr class="d-none d-lg-block black-rule">
+            <p>Get more to smile about directly to your inbox. We'll send you details of our newest ranges and special offers.</p>
+            <form id="subscription_form" action="" method="POST">
+                <div class="form-group">
+                    {% csrf_token %}
+                    {{ sub_form|crispy }}
+                    <small id="emailHelp">We'll never share your email with anyone else.</small>
+                </div>
+                <button type="submit" class="btn black-border submit-button">Subscribe</button>
+                <input type="hidden" name="subscribe_redirect" value="{{ request.path }}">
+            </form>
+        </div>
+        <div class="col-12 col-lg-4">
+            <hr class="d-lg-none black-rule">
+            <p class="footer-header">
+                <i class="fas fa-thumbs-up mr-2"></i>
+                <strong>Social Media</strong>
+            </p>
+            <hr class="d-none d-lg-block black-rule">
+            <p> 
+                Like, Follow and Subscribe to our social media pages to get access to our exclusive products and offers.
+            </p> 
+			<ul class="list-inline">
+				<li class="list-inline-item social-icon">
+					<a href="https://en-gb.facebook.com/" target="_blank" rel="noopener" aria-label="Like us on Facebook">
+						<i class="fab fa-facebook-square" aria-hidden="true"></i>
+						<span class="sr-only">Facebook</span>
+					</a>
+				</li>
+				<li class="list-inline-item social-icon">
+					<a href="https://twitter.com/?lang=en-gb" target="_blank" rel="noopener" aria-label="Follow us on Twitter">
+						<i class="fab fa-twitter-square" aria-hidden="true"></i>
+						<span class="sr-only">Twitter</span>
+					</a>
+				</li>
+				<li class="list-inline-item social-icon">
+					<a href="https://www.instagram.com/?hl=en" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+						<i class="fab fa-instagram" aria-hidden="true"></i>
+						<span class="sr-only">Instagram</span>
+					</a>
+				</li>
+				<li class="list-inline-item social-icon">
+					<a href="http://www.youtube.com/" target="_blank" rel="noopener" aria-label="Subscribe on Youtube">
+						<i class="fab fa-youtube-square" aria-hidden="true"></i>
+						<span class="sr-only">YouTube</span>
+					</a>
+				</li>
+            </ul>            
+		</div>
+    </div>  
+</footer>
