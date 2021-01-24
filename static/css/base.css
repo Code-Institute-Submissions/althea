@@ -306,7 +306,7 @@ input[name='q']::placeholder {
     }
 }
 
-/* Styling for footer */
+/* --- Styling for footer --- */
 #footer {
     background-color: #6c757d4f;
     text-align: center;
