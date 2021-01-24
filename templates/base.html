@@ -173,73 +173,12 @@
     {% endblock %}
 
     {% block content %}
-    {% endblock %}
-    
-    <!-- Footer -->
-    <footer class="footer-all">
-        <div class="pt-2 pt-md-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h5 class="footer-title">Quick links</h5>
-                        <ul class="footer-corporate-list">                            
-                            <li><a href="">About</a></li>                            
-                            <li><a href="">Contact</a></li>
-                            <li><a href="">Our Store</a></li>
-                        </ul>                      
-                    </div>
-                    <div class="col-sm-12">
-                        <h5 class="footer-title">Visit our shop</h5>
-                            <ul>
-                                <li>
-                                    <div class="row mb-3">
-                                        <div class="col-3">Address:</div>
-                                        <div class="col-9">
-                                            <ul>
-                                                <li>Brookside, Bulanao, Tabuk City, Kalinga</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="row">
-                                        <div class="col-3">Phone Number:</div>
-                                        <div class="col-9">
-                                            <ul>
-                                                <li>0922-858-0729</li>
-                                                
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="second-footer-panel">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <ul id="social-icon" class="text-center">
-                            <li class="mr-2">
-                                <a href="" rel="noopener" target="_blank">
-                                    <i class="fab fa-linkedin fa-2x"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="" rel="noopener" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-12 text-center">
-                        <p><span class="mr-3">© 2020 Althea Store</span><span>Educational Purpose Only.</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    {% endblock %}    
+
+    <footer class="footer mt-auto py-3"> 
+            {% include 'includes/footer.html' %}
     </footer>
- 
+    
     <!-- Js function for the toasts -->
     {% block postloadjs %}
     <script type="text/javascript">
