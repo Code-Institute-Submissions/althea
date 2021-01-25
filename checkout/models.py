@@ -21,16 +21,20 @@ class Order(models.Model):
     building_name = models.CharField(max_length=100, null=True, blank=True)
     house_number = models.CharField(max_length=40, null=False, blank=False)
     street_address = models.CharField(max_length=250, null=False, blank=False)
-    province = models.CharField(max_length=100, null=False, blank=False, default='')
+    province = models.CharField(
+        max_length=100, null=False, blank=False, default='')
     barangay = models.CharField(max_length=80, null=False, blank=False)
     landmark = models.TextField(null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
-    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
-    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
-    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    delivery_cost = models.DecimalField(
+        max_digits=6, decimal_places=2, null=False, default=0)
+    order_total = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0)
+    grand_total = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0)
     original_bag = models.TextField(null=False, blank=False, default='')
-    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
-
+    stripe_pid = models.CharField(
+        max_length=254, null=False, blank=False, default='')
 
     def _generate_order_number(self):
         """
@@ -65,10 +69,15 @@ class Order(models.Model):
 
 
 class OrderLineItem(models.Model):
-    order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE,related_name='lineitems')
-    product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)    
+    order = models.ForeignKey(
+        Order, null=False, blank=False,
+        on_delete=models.CASCADE, related_name='lineitems')
+    product = models.ForeignKey(
+        Product, null=False, blank=False, on_delete=models.CASCADE)
     quantity = models.IntegerField(null=False, blank=False, default=0)
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    lineitem_total = models.DecimalField(
+        max_digits=6, decimal_places=2,
+        null=False, blank=False, editable=False)
 
     def save(self, *args, **kwargs):
         """
@@ -80,5 +89,3 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'SKU {self.product.sku} on order {self.order.order_number}'
-
-

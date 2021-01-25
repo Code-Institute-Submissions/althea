@@ -11,14 +11,22 @@ class UserProfile(models.Model):
     delivery information and order history
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    default_phone_number = models.CharField(max_length=20, null=True, blank=True)
-    default_building_name = models.CharField(max_length=100, null=True, blank=True)
-    default_house_number = models.CharField(max_length=40, null=True, blank=True)
-    default_street_address = models.CharField(max_length=250, null=True, blank=True)
-    default_barangay = models.CharField(max_length=80, null=True, blank=True)    
-    default_town_or_city = models.CharField(max_length=40, null=True, blank=True, default='')
-    default_province = models.CharField(max_length=100, null=True, blank=True, default='')
-    default_country = CountryField(blank_label='Country', null=True, blank=True)
+    default_phone_number = models.CharField(
+        max_length=20, null=True, blank=True)
+    default_building_name = models.CharField(
+        max_length=100, null=True, blank=True)
+    default_house_number = models.CharField(
+        max_length=40, null=True, blank=True)
+    default_street_address = models.CharField(
+        max_length=250, null=True, blank=True)
+    default_barangay = models.CharField(
+        max_length=80, null=True, blank=True)
+    default_town_or_city = models.CharField(
+        max_length=40, null=True, blank=True, default='')
+    default_province = models.CharField(
+        max_length=100, null=True, blank=True, default='')
+    default_country = CountryField(
+        blank_label='Country', null=True, blank=True)
 
     def __str__(self):
         return self.user.username
@@ -33,4 +41,3 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
     # Existing users: just save the profile
     instance.userprofile.save()
- 
