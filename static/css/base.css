@@ -30,13 +30,58 @@ body {
     text-transform: uppercase;
 }
 
+.welcome-store:hover,
+.welcome-store:active,
+.welcome-store:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #c747399e;
+    color: white;
+}
+
+.product-index {
+    background-color: #c74739;
+    text-transform: uppercase;
+}
+
 .greeting {
     color: #c74739;
 }
 
+/* --- Log out, log in and Register page --- */
+.account-logo {
+    margin-bottom: 24em;
+}
 
+.account-logo-link {
+    background-color: #c74739 !important;
+    text-transform: uppercase;
+}
 
-/* from Bulma */
+.account-logo-link:hover,
+.account-logo-link:active,
+.account-logo-link:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #c747399e !important;
+    color: white;
+}
+
+.account-logo-in {
+    margin-bottom: 5em;
+}
+
+.account-logo-out {
+    margin-bottom: 8em;
+}
+
+.account-logo-register {
+    margin-bottom: 14em;
+}
+
+/* --- from Bulma --- */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -47,6 +92,16 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+}
+
+/* --- Contact Us page --- */
+.contact-logo-font {
+    text-transform: uppercase;
+    margin-bottom: 15em;    
+}
+
+.contact-success-logo-font {
+    margin-bottom: 44em;
 }
 
 .banner-font {
@@ -63,6 +118,7 @@ body {
     color: white;
     min-width: 260px;
 }
+
 
 .btn-black {
     background: black;
@@ -208,7 +264,7 @@ input[name='q']::placeholder {
 
 /* --- Navbar --- */
 .navbar {
-    padding: 0px;
+    padding: 0.5em;
 }
 
 .dropdown-text {
@@ -216,8 +272,9 @@ input[name='q']::placeholder {
 }
 
 .our-store {
-    color: #c74739 ;
+    color: #c74739;
     text-transform: uppercase;
+    padding-top: 1em;
 }
 
 /* --- Allauth form formatting --- */
@@ -284,12 +341,18 @@ input[name='q']::placeholder {
    .header-container {
         padding-top: 2em;
     }
+
 }
 
 /* --- Product form --- */
 .btn-file {
     position: relative;
     overflow: hidden;
+}
+
+/* --- Profile page --- */
+.profile-update {
+    margin-bottom: 8em;
 }
 
 .btn-file input[type="file"] {
@@ -326,10 +389,15 @@ input[name='q']::placeholder {
 
     .banner-font {
         font-size: 1.5em !important;
+        padding-top: 1em;
     }
 
     .header-container {
         padding-top: 4em;
+    }    
+
+    .account-logo-in {
+        margin-bottom: 21em;
     }
 }
 
@@ -337,8 +405,7 @@ input[name='q']::placeholder {
 @media (max-width: 991px) {
     .header-container {
         padding-top: 3em;
-    }
-    
+    }    
 
     body {
         height: calc(100vh - 116px);
@@ -379,6 +446,20 @@ input[name='q']::placeholder {
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
+
+    .account-logo,
+    .account-logo-register,
+    .account-logo-in {
+    margin-bottom: 5em;
+    }
+
+    .contact-success-logo-font {
+    margin-bottom: 5em;
+    }
+    
+    .profile-update {
+        margin-bottom: 5em;
+    }    
 }
 
 /* --- Styling for footer --- */
@@ -386,7 +467,7 @@ input[name='q']::placeholder {
     background-color: #7e7e83;
     text-align: center;
     font-size: 1em;
-    color: #f5f1e6;
+    color: #f5f1e6;    
 }
 
 .footer-row {
