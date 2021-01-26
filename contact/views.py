@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Contact
 from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse
 
 
 def contact_us(request):
@@ -18,7 +19,7 @@ def contact_us(request):
             subject = "Althea Store Inquiry"
             message = post.message = request.POST.get(
                 "cmessage") + " From: " + post.full_name + " Sender's Email Address " + post.email + post.phone_number
-            from_email = "tasteworldsnacks@example.com"
+            from_email = "althea.online.store@gmail.com"
             if subject and message and from_email:
                 try:
                     send_mail(
