@@ -60,10 +60,8 @@ For this project, I will be using python and Django as my primary programming la
 * [CSS](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics) - Used to style the website
 * [jQuery](https://jquery.com/) - jQuery came with Materialize to make the components used responsive.
 * [Python](https://www.python.org/) - Primary tool used to create function 
-
-## Libraries and other Technologies
-* Bootstrap4
-* Django
+* [Bootstrap4](https://getbootstrap.com/) - CSS framework used to assist with website responsiveness.
+* [Django](https://www.djangoproject.com/) - Python web framework for quick development.
 * [Font Awesome](https://fontawesome.com/) - I used the font awesome icons for the social media, location and contact details
 * [Google Fonts](https://fonts.google.com/) - Used to style the fonts of the website
 * [Git](https://git-scm.com/) - Git was used for version control by utilizing the Gitpod terminal to commit to Git and push to GitHub.
@@ -71,8 +69,19 @@ For this project, I will be using python and Django as my primary programming la
 * [Heroku](https://dashboard.heroku.com/) - Heroku was used to deploy the project
 * [Trello](https://trello.com/b/a3dsnJ58/ms2-project) - Tools used for project management
 * [Favicon](https://favicon.io/) - Tool used to generate the website icon
-* AWS
-* Stripe
+* [AWS](https://aws.amazon.com/) - Used to store static files.
+* [Stripe](https://dashboard.stripe.com/) - payment infrastructure to validate and accept credit card payments securely.
+* [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) - Used to configure and manage s3 buckets
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Used mostly for DOM manipulation upon user interaction
+* [Django-aullauth](https://django-allauth.readthedocs.io/en/latest/index.html) - Django authentication toolset
+* [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - to style the django forms.
+* [Jinja2](https://pypi.org/project/Jinja2/) - Used as the main language for template manipulation.
+* [Pillow](https://pillow.readthedocs.io/en/stable/) - Python imaging library to support opening, manipulating, and saving images.
+* [Psycopg2](https://pypi.org/project/psycopg2/) - PostgreSQL database adapter for Python.
+* [Gunicorn](https://pypi.org/project/gunicorn/) - Python WSGI HTTP Server.
+* [Balsamiq](https://balsamiq.cloud/) - used to create the wireframes for this project.
+* [Trello](https://trello.com/b/a3dsnJ58/ms2-project) - Tools used for project management
+* [Favicon](https://favicon.io/) - Tool used to generate the website icon
 
 # Features
 
@@ -91,9 +100,22 @@ For this project, I will be using python and Django as my primary programming la
 # Credits
 
 ## Content
+Product images and details for the Food Grocery, Fresh Goods and non-alcoholic Drinks were obtained from the following websites:
+* [antshop](https://antshop.ph/)
+* [mygroceryph](https://mygroceryph.com/)
+* [gorobinsons](https://gorobinsons.ph/)
+* [savvys](https://www.savvys.ph/)
+* [agriculture](https://www.agriculture.com.ph/2018/11/21/native-chicken-farming/)
+* [eggs](https://media.karousell.com/media/photos/products/2019/08/01/110019_243137255_thumbnail_progressive_thumbnail.jpg)
+
+Alcoholic drinks images and details were obtained from below website:
+* [alak](https://alak.ph/)
 
 ## Acknowledgement 
+Main source of inspiration for all my projects is our 2 years old daughter and my ever supportive wife. 
 
+[Code Institute](https://codeinstitute.net/) For the excellent overall content and mini projects from the course
+Thanks to [Tim](https://github.com/TravelTimN) and Igor Basuga for their endless support and patience. 
 
 
 
