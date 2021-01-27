@@ -18,7 +18,7 @@ Browser testing was done using below browsers to ensure website can be viewed fo
 * Safari
 * IE
 
-Summary of the testing result can be found [here]
+Summary of the testing result can be found [here](https://github.com/gideongannaban/althea/blob/master/Readme/Images/testing/responsivess.PNG)
 
 ## Testing User Stories 
 

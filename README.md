@@ -179,7 +179,7 @@ The project was deployed to Heroku with all static and media files stored on Ama
 
 6. To migrate to the postgres, go to settings.py and import dj_database_url:
  
-   ![postgres]
+   ![postgres]()
 
     Note: The database URL can be accessed through the VARS Settings from the Heroku dashboard
 
@@ -199,7 +199,7 @@ The project was deployed to Heroku with all static and media files stored on Ama
 
 9. Go to the Settings Tab, scroll to the "Config Vars" then click on "Reveal Config Vars".
 
-![Heroku5]
+![Heroku5](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Heroku5.JPG)
 
 10. Enter variables(key and value)
 
@@ -245,7 +245,7 @@ The project was deployed to Heroku with all static and media files stored on Ama
 
 19. Under the Manual Deploy, click on the "Deploy Branch".
 
-![Heroku8]
+![Heroku8](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Heroku8.JPG)
 
 20. Heroku will now build the app using the required package
 
