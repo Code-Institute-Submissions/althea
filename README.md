@@ -1,3 +1,5 @@
+![Responsive](https://github.com/gideongannaban/althea/blob/master/Readme/Images/responsive.PNG)
+
 # ALTHEA ONLINE STORE
 
 ## Purpose
@@ -57,7 +59,7 @@ I chose easy to read and light fonts for this app. I am keeping it simple and wi
 
 I opted for this color pallete to make it simple and easy to combine with other major colors
 
-![Color Pallette]
+![Color Pallette](https://github.com/gideongannaban/althea/blob/master/Readme/Images/Color%20Pallette.PNG)
 
 ### Icons
 
@@ -66,7 +68,7 @@ On this project I have used easily identifiable Font Awesome icons.
 I designed my site moc-ups using [balsamiq](https://balsamiq.com/) wireframes.
 The idea was to create a basic layout structure of the site and identify how it will display on different screen sizes.
 
-For more details please click [wireframe]
+For more details please click [wireframe](https://github.com/gideongannaban/althea/blob/master/wireframes.md)
 
 ## Wireframes
 
@@ -136,10 +138,10 @@ For more details please click [wireframe]
 * Adjust bag button presented to user for easier navigation if any changes need to be made.
 * A summary of what the user will purchase will be presented prior to purchasing it
 
-### about
+### About
 * A history and story of how the business works
 
-### contact
+### Contact
 * Page where a user can send message to the business owner
 
 ## Features left to Implement
@@ -150,7 +152,7 @@ For more details please click [wireframe]
 * Give discounts if the customer will spend more than 3000Php 
 
 # Testing 
-For testing procedure please click [Testing.md]
+For testing procedure please click [Testing.md](https://github.com/gideongannaban/althea/blob/master/testing.md)
 
 ## Deploying to Heroku
 
@@ -158,11 +160,11 @@ The project was deployed to Heroku with all static and media files stored on Ama
 
 1. Login to Heroku, click on "New" then on the dropdown choose "Create App".
 
-![Heroku]
+![Heroku](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Heroku.JPG)
 
 2. Give the app a unique name and choose the region closest to your location then click "Create App"
 
-![Heroku2]
+![Heroku2](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Heroku2.png)
 
 3. Then on the 'Resources' tab, search and add on the Heroku Postgres database.
 
@@ -177,9 +179,7 @@ The project was deployed to Heroku with all static and media files stored on Ama
 
 6. To migrate to the postgres, go to settings.py and import dj_database_url:
  
-   DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
+   ![postgres]
 
     Note: The database URL can be accessed through the VARS Settings from the Heroku dashboard
 
@@ -189,21 +189,11 @@ The project was deployed to Heroku with all static and media files stored on Ama
 
   After migrations have been applied amend your database configurations t0:
 
-if 'DATABASE_URL' in os.environ:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
+  ![database]
 
   * This will ensure the Postgres database is used in deployment and your sqlite3 in development.
 
-8. Create a superuser to log:
+8. Create a superuser login:
 
   * python3 manage.py createsuperuser
 
@@ -213,7 +203,7 @@ else:
 
 10. Enter variables(key and value)
 
-![vars]
+![vars](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Vars.PNG)
 
 11. Install gunicorn and freeze to the requirements.txt
 
@@ -243,15 +233,15 @@ else:
   
 16. From the deploy tab, select the Deployment method 'Github'.
 
-![Heroku3]
+![Heroku3](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Heroku3.png)
 
 17. After clicking the "Connect to Github", make sure Github profile name is displayed then type in your repository name then click "Search". Once repo is found click on "Connect".
 
-![Heroku4]
+![Heroku4](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Heroku4.JPG)
 
 18. Go to the Deploy Tab in Heroku and under the Automatic Deployment section click on "Enable Automatic Deploys". 
 
-![Heroku7]
+![Heroku7](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Heroku7.JPG)
 
 19. Under the Manual Deploy, click on the "Deploy Branch".
 
@@ -271,15 +261,15 @@ else:
 * Make sure Git Bash App is downloaded in your laptop/desktop
 * Paste the Cloned link using the "Git Bash here" option.
 
-![gitbash]
+![gitbash](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/gitbash.png)
 
 4. Type "git clone" in the Git Bash command page, then paste the URL you copied.
 
-![gitclone]
+![gitclone](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/gitclone.JPG)
 
 5. Press Enter to create the local clone. 
 
-![local clone]
+![local clone](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/localclone.JPG)
 
 ## Environment Variable
 
@@ -287,11 +277,11 @@ else:
 
 1. Click the dropdown button besides you gitpod image in the gitpod workspace dashboard, then click on settings:
 
-![gitpod1]
+![gitpod1](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/gitpod1.PNG)
 
 2. In the Environment variables Page, I manually added the needed keys and valuue:
 
-![gitpod2]
+![gitpod2](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/gitpod2.PNG)
 
 
 # Credits
