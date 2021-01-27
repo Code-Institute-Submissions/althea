@@ -20,6 +20,7 @@ For this project, I will be using python and Django as my primary programming la
 ## User Stories:
 
 * Viewing and Navigation
+  - As a shopper, I should have information regarding delivery
   - As a shopper, I should be able to view a list of all products and select some to purchase.
   - As a shopper, I should be able view all the items in my shopping list with description/quantity/size and total cost at any time
   
@@ -252,6 +253,104 @@ The project was deployed to Heroku with all static and media files stored on Ama
 21. Once done, you will receive the message "Your app was successfully deployed" and click "View" to launch the app.
 
 ## Deploying AWS S3 Static and Media Files
+
+The project used Amazon Web Services s3, which is a cloud-based storage service, to store static and media files.
+
+1. Create an account by navigating to [aws.amazon.com](https://aws.amazon.com/) and clicking create an AWS account. Fill in your email and password, and a username for your account, and select continue.
+
+2. Now on the account type page, select personal and fill out the required information, click create an account and continue.
+
+3. Next you will be asked to enter a credit card number which will be used for billing if we go above the free usage limits. Beyond this, you'll be asked a couple more verification questions then once all required information is confirmed your account will be created.
+
+4. Now you can navigate back to [aws.amazon.com](https://aws.amazon.com/) and sign-in to your account
+
+5. Navigate to AWS management console under my account and using the 'find services' search bar, find s3
+
+6. Now open s3 and create a new bucket to store all your files.
+
+* Enter a name for your bucket
+  - preferrably same as your Heroku App so it's easy to remember
+
+* Select a Region.
+  - Select the region closest to you
+
+* Uncheck block all public access and acknowledge that the bucket will be public.
+
+7. Now click into your new Bucket and set some settings;
+
+* Turn on static website hosting under the Properties tab
+
+* On the Permission, you'll need to do the following:
+
+  - Paste in a CORS Configuration to set up the required access between Heroku app and s3 bucket. Copy the code below supplied by CodeInstitute;
+
+  ![cors]
+
+  - In the Bucket Policy tab, select Policy Generator
+     * Policy type is 's3 bucket policy'
+     * Allow all principles using a *
+     * Actions is 'GetObject'
+     * Add in your ARN (you find this under the bucket tab)    
+     * Click 'Add statement' then 'Generate policy'
+     * Copy the policy code and paste it into the bucket policy editor
+     * Click Save
+
+  - In the Access Control List tab, under the Public Access section, set the list objects permission to everyone.
+
+8. Create a user to access the bucket created.
+
+  - Search for a new service 'IAM'
+
+  - Now open IAM, navigate to 'groups' and click 'Create new group'
+
+  - Create a policy by navigating to 'policies' and click 'Create policy'
+
+  - Go JSON tab and click 'import managed policy'
+
+    * Search for s3 and then import the s3 full access policy.
+      
+      * Replace resource value '*' with your bucket ARN from the bucket policy page;
+    
+    * Click 'Review policy', give it a name and a description and click 'Create policy'
+
+9. Attach the policy to the group you created.
+
+  * Navigate to 'groups', select the group you created and on permissions tab select 'Attach policy'.
+
+  * Search for the policy you created, select it and click 'Attach policy'.
+
+  * Now to create the user, navagate to 'users' and click 'Add user'
+
+    - Add username, select programmatic access then click 'Next'
+
+    - Add user to a group by selecting the group you created and click 'Next' then click through to the end and click 'Create user'
+
+    - Now download the CSV file which will contain this users access key and secret access key
+
+      * Don't forget to save the CSV files since you won't be able to access it anymore once you exit from the page. You'll need the info to be added in the Heroku Variable
+
+10. To connect to Django, head to your project and install two new packages then freeze them into your requirements.txt;
+
+  * pip3 install boto3
+
+  * pip3 install django-storages
+
+  * pip3 freeze > requirements.txt
+
+11. In settings, add 'storages' to installed apps.
+
+12. To connect Django to S3, add the below settings in settings.py:
+
+  ![aws]
+
+13. Create a file called custom_storages.py and add the content below;
+
+  ![storages]
+
+  Then add the following in your settings.py
+
+  ![settings]
+
 
 ## Making a Github Clone
 
