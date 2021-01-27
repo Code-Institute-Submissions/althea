@@ -11,7 +11,9 @@ For this project, I will be using python and Django as my primary programming la
 
 ## Project Goals:
 
-* Create an e-commerce site where consumers can comfortably purchase their regular needs rather than going to our Store physically. 
+* Create an e-commerce site where consumers can purchase their basic daily needs from grocery food to household cleaning needs
+
+* Provide option for customers to do their grocery purchases in the comfort of their homes rather than risk getting infected of the pandemic when going out.
 
 ## User Stories:
 
@@ -49,9 +51,22 @@ For this project, I will be using python and Django as my primary programming la
 
 ### Fonts
 
+I chose easy to read and light fonts for this app. I am keeping it simple and will only use one type of font, Lato. 
+
 ### Color Fonts
 
+I opted for this color pallete to make it simple and easy to combine with other major colors
+
+![Color Pallette]
+
 ### Icons
+
+On this project I have used easily identifiable Font Awesome icons.
+
+I designed my site moc-ups using [balsamiq](https://balsamiq.com/) wireframes.
+The idea was to create a basic layout structure of the site and identify how it will display on different screen sizes.
+
+For more details please click [wireframe]
 
 ## Wireframes
 
@@ -87,15 +102,197 @@ For this project, I will be using python and Django as my primary programming la
 
 ## Existing Features
 
+### Delivery Banner
+* Delivery Banner contains information how the customer can avail of free delivery
+* The banner is only shown on the home page
+
+### Navbar
+* navbar is fixed and always remain on top of the page.
+* includes all links for an easy navigation through all the sections of the website 
+* Search bar so users can look up a particular item
+
+### My Account Page
+* A My Account Page where a user can register, login and logout
+* Profile page where the user can view their delivery details and previous purchases
+
+### Our Store Page
+* An Our Store page where a shopper can see items that are currently for sale
+* Dropdown box to sort items by price, name or category
+* Dropdown button for each Product Header to show the product categories
+* add to bag functionality is present with a quantity selector and add to bag button.
+* "Keep Shopping" button to return to products page.
+* Admin User will have the access to edit/delete items on this page
+
+### Shopping Bag
+* when empty will show an empty bag message and a link to products page.
+* A summary of all added products that contains the image, name, price, description, quantity and subtotal
+* Quantity can be updated or product removed within the page.
+* A total cost breakdown is presented to the user with information about bag total/delivery/discount.
+* A user can continue shopping by clicking on "Keep Shopping".
+* User can check out using "Secure Checkout" button.
+
+### Checkout
+* User will provide delivery and billing details as well as the card to be used for payment
+* Adjust bag button presented to user for easier navigation if any changes need to be made.
+* A summary of what the user will purchase will be presented prior to purchasing it
+
+### about
+* A history and story of how the business works
+
+### contact
+* Page where a user can send message to the business owner
+
 ## Features left to Implement
 
+* Give other form of payment option like paypal 
+* Give the customer ability to register using their social media
+* Add a loyalty page where customer can earn points for every purchases they'll do
+* Give discounts if the customer will spend more than 3000Php 
+
 # Testing 
+For testing procedure please click [Testing.md]
 
 ## Deploying to Heroku
 
+The project was deployed to Heroku with all static and media files stored on Amazon S3. I also set up automatic deployment to ensure my Heroku app was always up to date with my GitPod repository.
+
+1. Login to Heroku, click on "New" then on the dropdown choose "Create App".
+
+![Heroku]
+
+2. Give the app a unique name and choose the region closest to your location then click "Create App"
+
+![Heroku2]
+
+3. Then on the 'Resources' tab, search and add on the Heroku Postgres database.
+
+4. To use Postgres, install dj_database_url, and psycopg2 in the project terminal using the following commands:
+
+  * pip3 install dj_database_url
+  * pip3 install psycopg2
+
+5. Freeze the requirements to ensure Heroku installs all the apps requirements when deployed using the following command:
+  
+  * pip3 freeze > requirements.txt
+
+6. To migrate to the postgres, go to settings.py and import dj_database_url:
+ 
+   DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+
+    Note: The database URL can be accessed through the VARS Settings from the Heroku dashboard
+
+7. Apply all migrations using the following command:
+
+  * python3 manage.py migrate
+
+  After migrations have been applied amend your database configurations t0:
+
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
+  * This will ensure the Postgres database is used in deployment and your sqlite3 in development.
+
+8. Create a superuser to log:
+
+  * python3 manage.py createsuperuser
+
+9. Go to the Settings Tab, scroll to the "Config Vars" then click on "Reveal Config Vars".
+
+![Heroku5]
+
+10. Enter variables(key and value)
+
+![vars]
+
+11. Install gunicorn and freeze to the requirements.txt
+
+  * pip3 install gunicorn
+  * pip3 freeze > requirements.txt
+
+12. Create a Procfile and add the following:
+
+  * web: gunicorn (name of your django app).wsgi:application
+
+  This tells Heroku to create a web dyno which will run gunicorn and serve the Django app.
+
+13. Temporarily disable collectstatic to ensure that Heroku won't try to collect static files when we deploy. Add the following in the config VARS in heroku:
+
+  * DISABLE_COLLECSTATIC = 1
+
+14. Add the hostname of your Heroku app to allowed hosts in settings.py
+
+  * ALLOWED_HOSTS = ['xxxxxxxx.herokuapp.com', 'localhost']
+
+15. Commit and push all changes to github.
+
+16. If you created your app on the website you will need to initialize your Heroku git remote:
+
+  * heroku git:remote -a (heroku app name)
+  * git push heroku master
+  
+16. From the deploy tab, select the Deployment method 'Github'.
+
+![Heroku3]
+
+17. After clicking the "Connect to Github", make sure Github profile name is displayed then type in your repository name then click "Search". Once repo is found click on "Connect".
+
+![Heroku4]
+
+18. Go to the Deploy Tab in Heroku and under the Automatic Deployment section click on "Enable Automatic Deploys". 
+
+![Heroku7]
+
+19. Under the Manual Deploy, click on the "Deploy Branch".
+
+![Heroku8]
+
+20. Heroku will now build the app using the required package
+
+21. Once done, you will receive the message "Your app was successfully deployed" and click "View" to launch the app.
+
+## Deploying AWS S3 Static and Media Files
+
 ## Making a Github Clone
 
+1. In the [repository page](https://github.com/gideongannaban/althea), click on the Clone or Download button ( right beside the Gitpod button).
+2. To clone the repository using HTTPS, copy the link in the "Clone with HTTPS".
+3. Open Git Bash.
+* Make sure Git Bash App is downloaded in your laptop/desktop
+* Paste the Cloned link using the "Git Bash here" option.
+
+![gitbash]
+
+4. Type "git clone" in the Git Bash command page, then paste the URL you copied.
+
+![gitclone]
+
+5. Press Enter to create the local clone. 
+
+![local clone]
+
 ## Environment Variable
+
+### For this project I decided to add my environment variables from the gitpod settings.
+
+1. Click the dropdown button besides you gitpod image in the gitpod workspace dashboard, then click on settings:
+
+![gitpod1]
+
+2. In the Environment variables Page, I manually added the needed keys and valuue:
+
+![gitpod2]
+
 
 # Credits
 
@@ -110,6 +307,8 @@ Product images and details for the Food Grocery, Fresh Goods and non-alcoholic D
 
 Alcoholic drinks images and details were obtained from below website:
 * [alak](https://alak.ph/)
+
+* Favicon logo was created from [canva](https://www.canva.com/)
 
 ## Acknowledgement 
 Main source of inspiration for all my projects is our 2 years old daughter and my ever supportive wife. 
