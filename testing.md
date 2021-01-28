@@ -111,16 +111,21 @@ Summary of the testing result can be found [here](https://github.com/gideonganna
 
 ### Validation of Python Code:
 
-Python codes were validated using below methods:
- - [pep8online.com](http://pep8online.com/checkresult)
- - Flake8 Linting errors
+[pep8online.com](http://pep8online.com/checkresult) - used to inspect my Python code against the style conventions in PEP 8.
 
-1. bag
+[Flake8](https://flake8.pycqa.org/en/latest/) - used to check if codes are in compliance with pep8. By using the following command I was able to check the problems across all my files without having to open each individual file.
 
- - No error or warning found on all python codes under this applicable
+  * python3 - m flake8
 
-2. Checkout
+PEP8 Errors/Warnings:
 
+* Line too long
+
+  - Most of the errors were fixed but there were lines that I ignored to avoid breaking any variables
+
+* Migration warnings and Avoid using null=True
+
+  - These were ignored as it doesn't affect the functionality of the code
 
 ### Validation for jQuerry
 
@@ -136,5 +141,32 @@ No error warning messages were recevied.
   - I did "CTRL + U" in Google Chrome then copied the codes. 
 
 Most of the errors detected were duplicate use of ID however per further checking the duplicates where located on the mobile version of the page thus I decided to ignore the messages. 
+
+### Google Chrome Dev Lighthouse
+
+[Lighthouse] was used to test the quality of the web pages.
+
+Here are the results:
+
+* Home Page
+
+Desktop version
+
+![desktop](https://github.com/gideongannaban/althea/blob/master/Readme/Images/testing/lighthouse-desktop-home%20v1.PNG)
+
+Mobile version
+
+![mobile](https://github.com/gideongannaban/althea/blob/master/Readme/Images/testing/lighthouse-home-mobile%20v1.PNG)
+
+* Store Page
+
+Desktop version
+
+![desktop](https://github.com/gideongannaban/althea/blob/master/Readme/Images/testing/lighthouse-desktop-store%20v1.PNG)
+
+Mobile version
+
+![mobile](https://github.com/gideongannaban/althea/blob/master/Readme/Images/testing/lighthouse-store-mobile%20v1.PNG)
+
 
 # Bugs:

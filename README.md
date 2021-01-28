@@ -66,12 +66,12 @@ I opted for this color pallete to make it simple and easy to combine with other 
 
 On this project I have used easily identifiable Font Awesome icons.
 
+## Wireframes
+
 I designed my site moc-ups using [balsamiq](https://balsamiq.com/) wireframes.
 The idea was to create a basic layout structure of the site and identify how it will display on different screen sizes.
 
 For more details please click [wireframe](https://github.com/gideongannaban/althea/blob/master/wireframes.md)
-
-## Wireframes
 
 # Technology Used
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - To create the structure and content of the page
@@ -163,6 +163,7 @@ The project was deployed to Heroku with all static and media files stored on Ama
 
 ![Heroku](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Heroku.JPG)
 
+
 2. Give the app a unique name and choose the region closest to your location then click "Create App"
 
 ![Heroku2](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Heroku2.png)
@@ -174,42 +175,50 @@ The project was deployed to Heroku with all static and media files stored on Ama
   * pip3 install dj_database_url
   * pip3 install psycopg2
 
+
 5. Freeze the requirements to ensure Heroku installs all the apps requirements when deployed using the following command:
   
   * pip3 freeze > requirements.txt
 
+
 6. To migrate to the postgres, go to settings.py and import dj_database_url:
  
-   ![postgres]()
-
+![postgres](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/postgress.PNG)
+   
     Note: The database URL can be accessed through the VARS Settings from the Heroku dashboard
+
 
 7. Apply all migrations using the following command:
 
-  * python3 manage.py migrate
+    * python3 manage.py migrate
 
-  After migrations have been applied amend your database configurations t0:
+After migrations have been applied amend your database configurations t0:
 
-  ![database]
+![database](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/database.PNG)
 
-  * This will ensure the Postgres database is used in deployment and your sqlite3 in development.
+    * This will ensure the Postgres database is used in deployment and your sqlite3 in development.
+
 
 8. Create a superuser login:
 
   * python3 manage.py createsuperuser
 
+
 9. Go to the Settings Tab, scroll to the "Config Vars" then click on "Reveal Config Vars".
 
 ![Heroku5](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Heroku5.JPG)
+
 
 10. Enter variables(key and value)
 
 ![vars](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Vars.PNG)
 
+
 11. Install gunicorn and freeze to the requirements.txt
 
   * pip3 install gunicorn
   * pip3 freeze > requirements.txt
+
 
 12. Create a Procfile and add the following:
 
@@ -217,13 +226,16 @@ The project was deployed to Heroku with all static and media files stored on Ama
 
   This tells Heroku to create a web dyno which will run gunicorn and serve the Django app.
 
+
 13. Temporarily disable collectstatic to ensure that Heroku won't try to collect static files when we deploy. Add the following in the config VARS in heroku:
 
   * DISABLE_COLLECSTATIC = 1
 
+
 14. Add the hostname of your Heroku app to allowed hosts in settings.py
 
   * ALLOWED_HOSTS = ['xxxxxxxx.herokuapp.com', 'localhost']
+
 
 15. Commit and push all changes to github.
 
@@ -232,25 +244,31 @@ The project was deployed to Heroku with all static and media files stored on Ama
   * heroku git:remote -a (heroku app name)
   * git push heroku master
   
+
 16. From the deploy tab, select the Deployment method 'Github'.
 
 ![Heroku3](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Heroku3.png)
+
 
 17. After clicking the "Connect to Github", make sure Github profile name is displayed then type in your repository name then click "Search". Once repo is found click on "Connect".
 
 ![Heroku4](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Heroku4.JPG)
 
+
 18. Go to the Deploy Tab in Heroku and under the Automatic Deployment section click on "Enable Automatic Deploys". 
 
 ![Heroku7](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Heroku7.JPG)
+
 
 19. Under the Manual Deploy, click on the "Deploy Branch".
 
 ![Heroku8](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/Heroku8.JPG)
 
+
 20. Heroku will now build the app using the required package
 
 21. Once done, you will receive the message "Your app was successfully deployed" and click "View" to launch the app.
+
 
 ## Deploying AWS S3 Static and Media Files
 
@@ -284,7 +302,7 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
 
   - Paste in a CORS Configuration to set up the required access between Heroku app and s3 bucket. Copy the code below supplied by CodeInstitute;
 
-  ![cors]
+![cors](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/cors.PNG)
 
   - In the Bucket Policy tab, select Policy Generator
      * Policy type is 's3 bucket policy'
@@ -296,6 +314,7 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
      * Click Save
 
   - In the Access Control List tab, under the Public Access section, set the list objects permission to everyone.
+
 
 8. Create a user to access the bucket created.
 
@@ -313,6 +332,7 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
     
     * Click 'Review policy', give it a name and a description and click 'Create policy'
 
+
 9. Attach the policy to the group you created.
 
   * Navigate to 'groups', select the group you created and on permissions tab select 'Attach policy'.
@@ -329,6 +349,7 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
 
       * Don't forget to save the CSV files since you won't be able to access it anymore once you exit from the page. You'll need the info to be added in the Heroku Variable
 
+
 10. To connect to Django, head to your project and install two new packages then freeze them into your requirements.txt;
 
   * pip3 install boto3
@@ -341,15 +362,16 @@ The project used Amazon Web Services s3, which is a cloud-based storage service,
 
 12. To connect Django to S3, add the below settings in settings.py:
 
-  ![aws]
+![aws](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/aws.PNG)
+
 
 13. Create a file called custom_storages.py and add the content below;
 
-  ![storages]
+![storages](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/storages.PNG)
 
   Then add the following in your settings.py
 
-  ![settings]
+  ![settings](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/settings.PNG)
 
 
 ## Making a Github Clone
