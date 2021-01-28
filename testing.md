@@ -170,3 +170,48 @@ Mobile version
 
 
 # Bugs:
+
+The journey of this website is not with-out bugs either minor or major ones. These are some of the ones that took me sometime to debug. 
+
+* At the beginning of the project, I decided to replaced some images from the admin account. After doing this, I run check on the progress of my project and I was getting below error.
+
+![error1]()
+
+Steps done to Resolve:
+
+  - I deleted the session ID from the cache as it's possible that the image I created was already in the bag. This works however whenever I add another item in the bag I was getting the same error. 
+
+  - Finally contacted a Tutor for clarification. Looks like the value I put under the FREE_DELIVERY_THRESHOLD in settings.py was a decimal and but my contexts.py was a whole number. I added the Decimal in my free_delivery_delta under the bag_contents method.
+
+
+* I was getting this error when I updated my checkout models to add country, province and town_or_city. 
+
+
+![error2]()
+
+
+Steps done to Resolve:
+
+  - I added default=None and changed null=True but now it's giving me the below error.
+
+![error3]()
+
+  - I ended up deleting the previous Migrations then added default="" for the newly added variables. Then finally this worked.
+
+
+* I was getting an error manually accessing the edit products url. I was typing in /store/edit/1/ on the page and it was giving below error.
+
+![error4]()
+
+
+Steps done to Resolve:
+
+  - I went back to the store page and then click on the same product then I noticed that it has a different product item number from the Product Details Page. It was showing as store/edit/77/ and futher research I learned that this is because I manually replaced these products from the admin. 
+
+
+* After Deploying to Heroku, the images and css were not loading on the deployed project. There was no error prompt in the console so I was having a hard time debugging it. 
+
+Steps done to Resolve:
+
+  - I check with Tutors and worked with Tim and Igor to find a solution the whole day. Tim suggested to create a new postgres file on Heroku and retry. This fixed the bug I was experiencing. 
+

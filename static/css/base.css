@@ -12,12 +12,17 @@ body {
 
 /* --- Logo --- */
 .althea-logo {
-    color: #3f3b41 ;
+    color: #f5f1e6 ;
     text-transform: uppercase;
 }
 
 .store {
     color: #caadae;
+}
+
+.logo-title {
+    background-color: #7e7e83;
+    color: #f5f1e6;
 }
 
 /* --- Products index page images --- */
@@ -104,9 +109,14 @@ body {
     margin-bottom: 44em;
 }
 
+#delivery-banner{
+    margin-top: 1em;
+}
+
 .banner-font {
     text-transform: uppercase;
-    background-color: #28a745 !important;    
+    background-color: #28a745 !important;        
+    font-size: 2.0em !important;    
 }
 
 .main-logo-link {
@@ -118,7 +128,6 @@ body {
     color: white;
     min-width: 260px;
 }
-
 
 .btn-black {
     background: black;
@@ -341,7 +350,6 @@ input[name='q']::placeholder {
    .header-container {
         padding-top: 2em;
     }
-
 }
 
 /* --- Product form --- */
@@ -385,12 +393,7 @@ input[name='q']::placeholder {
         right: 0;
         left: 0;
         z-index: 1030;
-    }
-
-    .banner-font {
-        font-size: 1.5em !important;
-        padding-top: 1em;
-    }
+    }   
 
     .header-container {
         padding-top: 4em;
@@ -405,7 +408,7 @@ input[name='q']::placeholder {
 @media (max-width: 991px) {
     .header-container {
         padding-top: 3em;
-    }    
+    }           
 
     body {
         height: calc(100vh - 116px);
@@ -413,6 +416,19 @@ input[name='q']::placeholder {
 
      .display-4.logo-font.text-black {
         font-size: 2rem;
+    }
+
+    .dropdown-text-nav {
+        color: seashell !important;
+    }   
+
+    .logo-title {
+        background-color: #7e7e83;
+        color: #f5f1e6;
+    }
+
+    #delivery-banner{
+       margin-top: 0px;
     }
 
     .nav-link {
@@ -426,11 +442,7 @@ input[name='q']::placeholder {
     .navbar-toggler {
         padding: .6rem .6rem;
         font-size: 1rem;
-    }
-
-    #delivery-banner h4 {
-        font-size: .9rem;
-    }
+    }  
 
     .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
@@ -459,7 +471,7 @@ input[name='q']::placeholder {
     
     .profile-update {
         margin-bottom: 5em;
-    }    
+    }   
 }
 
 /* --- Styling for footer --- */
@@ -487,15 +499,12 @@ li {
     list-style-type: none;
 } 
 
-.footer-link a {    
-    text-decoration: underline;
-    text-decoration-color: #c74739;
+.footer-link a {          
     color: #f5f1e6;
 }
 
 .footer-link a:hover {
-    color: #fff;
-    text-decoration-color: #fff;
+    color: #c74739;    
     transition: .25s ease-in-out;
 }
 

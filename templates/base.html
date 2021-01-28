@@ -49,8 +49,8 @@
     <title>ALTHEA{% block extra_title %}{% endblock %}</title>
 </head>
 <body>          
-    <header class="container-fluid fixed-top w-100">         
-        <div id="topnav"  class="row bg-white pt-lg-2 d-none d-lg-flex">
+    <header class="container-fluid fixed-top w-100 logo-title ">         
+        <div id="topnav"  class="row pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="althea-logo my-0"><strong>ALTHEA <span class="store">Store</span></strong></h2>
@@ -58,14 +58,14 @@
             </div>
              <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center my-0">
-                    <li class="list-inline-item">
+                    <li class="list-inline-item footer-link">
                         <div class="text-center">	                            	
-                           <h4><a class="dropdown-text" href="{% url 'store' %}">Our Store</a></h4> 	
+                           <h3><a href="{% url 'store' %}">Our Store</a></h3> 	
                         </div>
                     </li>
-                    <li class="list-inline-item">
+                    <li class="list-inline-item footer-link">
                         <div class="text-center">	                            	
-                            <h4><a class="dropdown-text" href="{% url 'about_us' %}">About</a></h4>
+                            <h3><a  href="{% url 'about_us' %}">About</a></h3>
                         </div>
                     </li>   
                 </ul>
@@ -138,7 +138,7 @@
             </div>
         </div>        
         <!-- Mobile navbar -->
-        <div class="row bg-white"> 
+        <div class="row logo-title "> 
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

@@ -43,7 +43,6 @@ For this project, I will be using python and Django as my primary programming la
    - As a Site user, I should be able to Receive an email confirmation after registration.
    - As a Site user, I should be able to Receive an email confirmation after registration.
    - As a Site user, I should be able to update information on my profile anytime.
-   - As a Site user, I should be able to delete my profile.
 
 * As an Admin
   - As an Admin, I should be able to add a product.
@@ -98,8 +97,6 @@ For more details please click [wireframe](https://github.com/gideongannaban/alth
 * [Psycopg2](https://pypi.org/project/psycopg2/) - PostgreSQL database adapter for Python.
 * [Gunicorn](https://pypi.org/project/gunicorn/) - Python WSGI HTTP Server.
 * [Balsamiq](https://balsamiq.cloud/) - used to create the wireframes for this project.
-* [Trello](https://trello.com/b/a3dsnJ58/ms2-project) - Tools used for project management
-* [Favicon](https://favicon.io/) - Tool used to generate the website icon
 
 # Features
 

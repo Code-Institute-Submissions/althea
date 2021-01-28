@@ -11,11 +11,11 @@
 
 {% block content %}
 <!-- Delivery banner information -->
-        <div id="delivery-banner" class="row text-center">
-            <div class="col text-white">
-                <h4 class="banner-font my-1">Free delivery for orders over ₱{{ free_delivery_threshold|floatformat:2 }}</h4>
-            </div>            
-        </div>          
+<div id="delivery-banner" class="row text-center">
+    <div class="col text-white">
+        <h4 class="banner-font my-1">Free delivery for orders over ₱{{ free_delivery_threshold|floatformat:2 }}</h4>
+    </div>            
+</div>          
 <section>
     <div class="page-container">
         <div class="page-width">           
@@ -46,25 +46,25 @@
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 text-center">
                 <a href="{% url 'store' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}grocery.jpg" alt="grocery" >
+                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}grocery.webp" alt="grocery" >
                 </a>
                 <h4 class="product-index">Food Grocery</h4>
             </div>
               <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 text-center">
                 <a href="{% url 'store' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}fresh.jpg" alt="fresh">
+                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}fresh.webp" alt="fresh">
                 </a>
                 <h4 class="product-index">Fresh Goods</h4>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 text-center">
                 <a href="{% url 'store' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}drinks.jpg" alt="drinks">
+                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}drinks.webp" alt="drinks">
                 </a>    
                 <h4 class="product-index">Drinks</h4>
             </div>
               <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 text-center">
                 <a href="{% url 'store' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}household.jpg" alt="household">
+                    <img class="img-fluid rounded" src="{{ MEDIA_URL }}household.webp" alt="household">
                 </a>
                 <h4 class="product-index">Household</h4>
             </div>

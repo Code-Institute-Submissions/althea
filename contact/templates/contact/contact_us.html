@@ -29,13 +29,13 @@
                 {{ form|crispy }}
                 <div class="form-group">
                     <legend class="fieldset-label px-2 w-auto">Full Name *</legend>
-                    <input type="text" name="fname" class="form-control mb-3" required />
+                    <input type="text" name="fname" class="form-control mb-3" pattern="^[a-zA-Z]{2,100}$" required />
                     <legend class="fieldset-label px-2 w-auto">Phone Number *</legend>
-                    <input type="text" name="pnumber" class="form-control mb-3" required />
+                    <input type="text" name="pnumber" class="form-control mb-3" pattern="^[0-9]{0,11}$" placeholder="numbers only" required />
                     <legend class="fieldset-label px-2 w-auto">Email *</legend>
-                    <input type="email" id="email" name="emailadd" class="form-control mb-3" required />
+                    <input type="email" id="email" name="emailadd" class="form-control mb-3" pattern="^[a-zA-Z]{8,100}$" required />
                     <legend class="fieldset-label text-black px-2 w-auto">Message *</legend>
-                    <textarea name="cmessage" class="form-control mb-3" style="width: 100%; height: 150px;" required></textarea>
+                    <textarea name="cmessage" class="form-control mb-3" style="width: 100%; height: 150px;" pattern="^[a-zA-Z]{2,100}$" required></textarea>
                 </div> 
                 <!-- submit button and link to home -->
                 <div class="text-center">
