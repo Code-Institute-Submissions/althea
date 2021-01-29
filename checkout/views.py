@@ -98,7 +98,7 @@ def checkout(request):
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
-            amount=stripe_total,
+            amount=round(stripe_total * 100),
             currency=settings.STRIPE_CURRENCY,
         )
 

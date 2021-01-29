@@ -474,6 +474,21 @@ input[name='q']::placeholder {
     }   
 }
 
+/* --- Paginator --- */
+.page-links {
+    text-align: center;
+    margin: auto;
+    width: 50%
+}
+
+.page-number {
+    color: #343a40;
+}
+
+.page-number-update {
+    color: red;
+}
+
 /* --- Styling for footer --- */
 #footer {
     background-color: #7e7e83;

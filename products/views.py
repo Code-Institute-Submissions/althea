@@ -6,6 +6,7 @@ from django.db.models.functions import Lower
 
 from .models import Product, Category
 from .forms import ProductForm
+from django.core.paginator import Paginator
 
 
 def all_products(request):
@@ -16,6 +17,9 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
+    product_paginator = Paginator(products, 10)
+    page_number = request.GET.get('page')
+    page = product_paginator.get_page(page_number)
 
     if request.GET:
         """ Sorting Products """
@@ -58,6 +62,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'page': page,
     }
 
     return render(request, 'products/store.html', context)
