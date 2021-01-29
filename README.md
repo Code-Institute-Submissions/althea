@@ -417,6 +417,7 @@ Alcoholic drinks images and details were obtained from below website:
 * [alak](https://alak.ph/)
 
 * Favicon logo was created from [canva](https://www.canva.com/)
+* [youtube](https://github.com/PrettyPrinted/youtube_video_code/tree/master/2020/09/30/Django%20Pagination%20Tutorial) - Pretty Printed youtube tutorial how to make pagination.
 
 ## Acknowledgement 
 Main source of inspiration for all my projects is our 2 years old daughter and my ever supportive wife. 
