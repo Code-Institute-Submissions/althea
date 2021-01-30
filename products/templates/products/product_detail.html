@@ -92,17 +92,22 @@
                     {% endif %}      
                     {% if request.user.is_superuser %}
                         <small class="ml-3">
-                            <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                            <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#staticBackdrop" id="myInput" >
+                            <a class="btn red-border-btn px-2 py-1 p-font rounded-0" href="{% url 'edit_product' product.id %}">
+                                Edit
+                            </a> 
+                            | 
+                            <a class="btn red-btn px-2 py-1 p-font rounded-0" data-toggle="modal" data-target="#productDelete{{ product.id }}">
                                 Delete
-                            </button>
+                            </a>
                         </small>
                         <!-- Modal -->
-                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal fade" id="productDelete{{ product.id }}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title our-store" id="staticBackdropLabel">Delete product?</h5>
+                                        <h5 class="modal-title our-store" id="staticBackdropLabel">
+                                            Delete product {{ product.name }} ?
+                                        </h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                         </button>
@@ -112,7 +117,9 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                    <button type="button" class="btn btn-danger" href="{% url 'delete_product' product.id %}">Delete</button>
+                                    <a href="{% url 'delete_product' product.id %}" class="btn welcome-store contact-logo-font rounded-0">
+                                        Delete
+                                    </a>
                                 </div>
                                 </div>
                             </div>

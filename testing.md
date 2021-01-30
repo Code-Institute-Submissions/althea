@@ -154,15 +154,25 @@ Desktop version
 
 ![desktop](https://github.com/gideongannaban/althea/blob/master/Readme/Images/testing/lighthouse-desktop-home%20v1.PNG)
 
+After some adjustments I was getting the below result for desktop. No change for the mobile version. 
+
+![desktophome2]()
+
 Mobile version
 
 ![mobile](https://github.com/gideongannaban/althea/blob/master/Readme/Images/testing/lighthouse-home-mobile%20v1.PNG)
+
 
 * Store Page
 
 Desktop version
 
 ![desktop](https://github.com/gideongannaban/althea/blob/master/Readme/Images/testing/lighthouse-desktop-store%20v1.PNG)
+
+After some adjustments I was getting the below result for desktop. No change for the mobile version. 
+
+![desktopstore2]()
+
 
 Mobile version
 
