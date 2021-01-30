@@ -92,11 +92,11 @@
                     {% endif %}      
                     {% if request.user.is_superuser %}
                         <small class="ml-3">
-                            <a class="btn red-border-btn px-2 py-1 p-font rounded-0" href="{% url 'edit_product' product.id %}">
+                            <a class="text-primary" href="{% url 'edit_product' product.id %}">
                                 Edit
                             </a> 
                             | 
-                            <a class="btn red-btn px-2 py-1 p-font rounded-0" data-toggle="modal" data-target="#productDelete{{ product.id }}">
+                            <a class="text-danger" data-toggle="modal" data-target="#productDelete{{ product.id }}">
                                 Delete
                             </a>
                         </small>
@@ -117,7 +117,7 @@
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                                    <a href="{% url 'delete_product' product.id %}" class="btn welcome-store contact-logo-font rounded-0">
+                                    <a href="{% url 'delete_product' product.id %}" class="btn welcome-store rounded-0">
                                         Delete
                                     </a>
                                 </div>

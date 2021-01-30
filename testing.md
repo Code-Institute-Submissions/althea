@@ -156,7 +156,7 @@ Desktop version
 
 After some adjustments I was getting the below result for desktop. No change for the mobile version. 
 
-![desktophome2]()
+![desktophome2](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/lighthouse-desktop-home%20v2.PNG)
 
 Mobile version
 
@@ -171,7 +171,7 @@ Desktop version
 
 After some adjustments I was getting the below result for desktop. No change for the mobile version. 
 
-![desktopstore2]()
+![desktopstore2](https://github.com/gideongannaban/althea/blob/master/Readme/Images/deployment/lighthouse-desktop-store%20v2.PNG)
 
 
 Mobile version
