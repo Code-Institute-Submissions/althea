@@ -9,7 +9,7 @@
     </div>
 {% endblock %}
 
-{% block content %}  
+{% block content %}
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
@@ -58,9 +58,9 @@
                         </p>
                     </div> 
                 </div>
-                <div class="row">                    
-                    {% for product in page.object_list %}
-                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                <div class="row">                               
+                    {% for product in products %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">                        
                             <!-- Product card header containing the image of product -->
                             <div class="card h-100 border-0">
                                 {% if product.image %}
@@ -153,23 +153,8 @@
                                 <hr>
                             </div>
                         {% endif %}
-                    {% endfor %}
-                    
-                </div>
-                <h5 class="page-number text-center">Page Number: <span class="page-number-update">{{ page.number }}</span></h5>
-                <!--- Page number -->
-                <div class="page-links">
-                    <p>
-                    {% if page.has_previous %}
-                        <a href="{% url 'store' %}?page={{ page.previous_page_number }}" class="our-store">Previous Page</a>
-                    {% endif %}
-                    |
-                    {% if page.has_next %}
-                        <a href="{% url 'store' %}?page={{ page.next_page_number }}" class="our-store">Next Page</a>
-                    {% endif %}
-                    </p>
-                </div>
-                
+                    {% endfor %}                    
+                </div>                
             </div>
         </div>
     </div>

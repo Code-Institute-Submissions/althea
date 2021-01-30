@@ -148,6 +148,8 @@ For more details please click [wireframe](https://github.com/gideongannaban/alth
 * Give the customer ability to register using their social media
 * Add a loyalty page where customer can earn points for every purchases they'll do
 * Give discounts if the customer will spend more than 3000Php 
+* Add pagination
+  - I tried my best adding this in my page. It worked fine however the filter and sorting are not synchronizing with the pagination. Did some research and checked some articles in stackoverflow but  I still cannot make it worked. 
 
 # Testing 
 For testing procedure please click [Testing.md](https://github.com/gideongannaban/althea/blob/master/testing.md)
