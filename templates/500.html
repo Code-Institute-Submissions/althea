@@ -10,22 +10,19 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay-500"></div>
+    <div class="overlay"></div>
     
-    <div class="container-fluid content">
-        <div class="row">
-            <div class="col-12 offset-lg-2" style="height:100vh">
-            
-                <h3 class="logo-font site-name">something broke...</h3>
-                <h3 class="logo-font site-name">it's not you, it's us... </h3>
-
+    <div class="container">
+        <div class="row">                       
+            <div class="col-12">               
+                <img class="img-fluid rounded error" src="{{ MEDIA_URL }}500.jpg" alt="500">        
+            </div>
             <div class="mx-auto my-5">
                 <h4>
-                    <a href="{% url 'store' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Return to shop</a>
+                    <a href="{% url 'store' %}" class="welcome-store btn btn-lg rounded-0 text-uppercase py-3 text-center">Return to shop</a>
                 </h4>
             </div>
             
         </div>
-    </div>
-    </div>
+</div>    
 {% endblock %}

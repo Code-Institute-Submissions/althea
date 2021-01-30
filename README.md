@@ -424,25 +424,3 @@ Main source of inspiration for all my projects is our 2 years old daughter and m
 
 [Code Institute](https://codeinstitute.net/) For the excellent overall content and mini projects from the course
 Thanks to [Tim](https://github.com/TravelTimN) and Igor Basuga for their endless support and patience. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-

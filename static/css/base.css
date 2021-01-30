@@ -564,3 +564,7 @@ li {
     box-shadow: none;
 }
 
+/* --- 404 page --- */
+.error {
+    margin-top: 2em;
+}

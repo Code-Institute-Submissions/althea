@@ -175,7 +175,7 @@ The journey of this website is not with-out bugs either minor or major ones. The
 
 * At the beginning of the project, I decided to replaced some images from the admin account. After doing this, I run check on the progress of my project and I was getting below error.
 
-![error1]()
+![error1](https://github.com/gideongannaban/althea/blob/master/Readme/Images/testing/error1.PNG)
 
 Steps done to Resolve:
 
@@ -187,21 +187,21 @@ Steps done to Resolve:
 * I was getting this error when I updated my checkout models to add country, province and town_or_city. 
 
 
-![error2]()
+![error2](https://github.com/gideongannaban/althea/blob/master/Readme/Images/testing/error2.PNG)
 
 
 Steps done to Resolve:
 
   - I added default=None and changed null=True but now it's giving me the below error.
 
-![error3]()
+![error3](https://github.com/gideongannaban/althea/blob/master/Readme/Images/testing/error3.PNG)
 
   - I ended up deleting the previous Migrations then added default="" for the newly added variables. Then finally this worked.
 
 
 * I was getting an error manually accessing the edit products url. I was typing in /store/edit/1/ on the page and it was giving below error.
 
-![error4]()
+![error4](https://github.com/gideongannaban/althea/blob/master/Readme/Images/testing/error4.PNG)
 
 
 Steps done to Resolve:
